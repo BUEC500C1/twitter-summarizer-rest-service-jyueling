@@ -11,6 +11,8 @@ import sys
 
 
 def print_tweet(username,num):
+    print(username)
+    print(num)
     config = configparser.ConfigParser()
     config.read("keys")
     auth = OAuthHandler(config.get('auth', 'consumer_key').strip(),

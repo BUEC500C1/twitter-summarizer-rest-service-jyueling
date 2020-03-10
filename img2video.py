@@ -29,10 +29,10 @@ def reshape():
 def ffmpeg(username):
 #    reshape()
     try:
-        os.popen('ffmpeg -framerate 1/3 -i ./Image/'+username+'_img_%d.jpg ./outputVideo/'+username+'_video.mp4').read()
+        os.popen('ffmpeg -y -framerate 1/3 -i ./Image/'+username+'_img_%d.jpg ./static/video.mp4').read()
         return "Success"
     except Exception as e:
         return "Failed create video" 
     
-#if __name__ == "__main__":
-#    ffmpeg("@Discovery")
+if __name__ == "__main__":
+    ffmpeg("@Twitter")
