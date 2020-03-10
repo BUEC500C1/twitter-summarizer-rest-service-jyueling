@@ -1,7 +1,7 @@
 ## twitter-summarizer-rest-service-jyueling
-This assignment allows multithreads to get tweets and image from twitter then convert it to videos according to each twitter accounts. Each frame of the video is 3 seconds.
+This assignment allows homework 4 video converter to run AWS, and using Flask as the WEB platform.
 
-## Requirement
+## Reference
 
 Get credentials of Twitter API, Google Vision API and ffmpeg
 
@@ -21,18 +21,20 @@ Get credentials of Twitter API, Google Vision API and ffmpeg
   os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="yourfilename.json"
   ```
 - [ffmpeg](http://ffmpeg.org/)
-## Assignment Question Answers
+- [Flask](https://palletsprojects.com/p/flask/)
+- [Flask-RESTFUL](https://flask-restful.readthedocs.io/)
+- [AWS](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc)
 
--   How many API calls you can handle simultaneously and why?
-    <br>My laptop is quad-core that it has 4 processors, so that it can handle 4 API calls simultaneously.
--   For example, run different API calls at the same time?
-    <br>It can run different API calls at the same time
--   Split the processing of an API into multiple threads?
-    <br>The processing of the API is split into 4 multiple threads.
-	
+## How to Run
+visit the following:
+```python
+http://ec2-3-19-185-70.us-east-2.compute.amazonaws.com:8000/
+```
+
 ## Example Result
-The video result is in the output video folder accoding to each twitter account. 
-![Image text](https://github.com/BUEC500C1/video-jyueling/raw/master/video_result.png)
-The image results from each twitter account are in the Image folder.
-![Image text](https://github.com/BUEC500C1/video-jyueling/raw/master/image_result.png)
+After connected to the AWS link, the website would show:
+![Image text](https://github.com/BUEC500C1/twitter-summarizer-rest-service-jyueling/raw/master/result1.png)
+Enter the username of the twitter and number of tweets, the result would show:
+![Image text](https://github.com/BUEC500C1/twitter-summarizer-rest-service-jyueling/raw/master/result2.png)
+
 
