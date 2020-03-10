@@ -16,17 +16,16 @@ def root():
 
 @app.route('/', methods=['POST'])
 def post():
+
     username = request.form['username']
     tweetNum = request.form['tweetNum']
 
 #    arg="python queue_system.py "+ str(username) #this line use for running the queue system
-#    arg="python tweet_api.py "+ str(username) +" "+ str(tweetNum)
-#    os.system(arg)
-    a = tweet_api.print_tweet(username,tweetNum)
-    if a:
-        b = img2video.ffmpeg(username)
-        if b == "Success":
-            return render_template('result.html')
+    arg="python tweet_api.py "+ str(username) +" "+ str(tweetNum)
+    os.system(arg)
+#    a = tweet_api.print_tweet(username,tweetNum)
+    img2video.ffmpeg(username)
+    return render_template('result.html')
 
 
 
